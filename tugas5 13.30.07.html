@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pemrograman Web 1</title>
+    <script type="text/javascript">
+        var awal = parseInt(prompt("Tahun Awal"));
+        var akhir = parseInt(prompt("Tahun Akhir"));
+    </script>
+</head>
+<body>
+
+<table border="1" cellpadding="10" cellspacing="0">
+<script type="text/javascript">
+    for (var i = awal; i <= akhir; i++) {
+
+        if ((i % 400 == 0) || (i % 4 == 0 && i % 100 != 0)) {
+            kata = "Kabisat";
+            warna = "green";
+        } 
+        else if (i % 2 == 0) {
+            kata = "Genap";
+            warna = "yellow";
+        } 
+        else {
+            kata = "Ganjil";
+            warna = "pink";
+        }
+
+        document.write(
+            "<tr bgcolor='" + warna + "'>" +
+            "<td>" + i + "</td>" +
+            "<td>" + kata + "</td>" +
+            "</tr>"
+        );
+    }
+</script>
+</table>
+
+</body>
+</html>
